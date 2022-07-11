@@ -6,6 +6,8 @@ import Profile from './pages/Profile';
 import Articles from './pages/Articles';
 import Article from './pages/Article';
 import NotFound from './pages/NotFound';
+import Login from './pages/Login';
+import MyPage from './pages/MyPage';
 
 // index props는 path=” / ”와 동일한 의미
 // 좀 더 명시적으로 표현
@@ -21,6 +23,8 @@ function App() {
       <Route path="/articles/" element={<Articles />}>
         <Route path=":id" element={<Article />} />
       </Route>
+      <Route path='/login' element={<Login />} />
+      <Route path='/mypage' element={<MyPage />} />
       <Route path='*' element={<NotFound />} />
     </Routes>
   );
