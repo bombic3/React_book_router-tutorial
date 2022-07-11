@@ -6,11 +6,13 @@ import Profile from './pages/Profile';
 import Articles from './pages/Articles';
 import Article from './pages/Article';
 
+// index props는 path=” / ”와 동일한 의미
 function App() {
   return (
     <Routes>
-      <Route element={<Layout />}>
-        <Route path="/" element={<Home />} />
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        {/* <Route path="/" element={<Home />} /> */}
         <Route path="/about" element={<About />} />
         <Route path="/profiles/:username" element={<Profile />} />
       </Route>
